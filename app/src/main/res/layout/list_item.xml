@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:id="@+id/linear">
+            <TextView
+                style="@style/ListItemStyle"
+                android:id="@+id/magnitude"
+                tools:text="5.0"
+                android:layout_weight="6"/>
+            <TextView
+                style="@style/ListItemStyle"
+                android:id="@+id/city"
+                tools:text="@tools:sample/cities"
+                android:layout_weight="4"/>
+            <TextView
+                style="@style/ListItemStyle"
+                android:id="@+id/date"
+                tools:text="@tools:sample/date/mmddyy"
+                android:layout_weight="5"/>
+        </LinearLayout>
