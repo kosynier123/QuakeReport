@@ -1,23 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linear"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:id="@+id/linear">
+    android:orientation="horizontal">
+    <TextView
+        android:id="@+id/magnitude"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="8dp"
+        android:background="@drawable/magnitude_circle"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        tools:text="8.9"/>
+    <LinearLayout
+        android:id="@+id/timeLinear"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="4"
+        android:orientation="vertical"
+        android:padding="8dp">
+
             <TextView
-                style="@style/ListItemStyle"
-                android:id="@+id/magnitude"
-                tools:text="5.0"
-                android:layout_weight="6"/>
+                android:id="@+id/offsetLocation"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:textSize="14dp"
+                android:textAllCaps="true"
+                android:textColor="@color/textColorEarthquakeDetails"
+                tools:text="Near to"/>
             <TextView
-                style="@style/ListItemStyle"
-                android:id="@+id/city"
-                tools:text="@tools:sample/cities"
-                android:layout_weight="4"/>
-            <TextView
-                style="@style/ListItemStyle"
-                android:id="@+id/date"
-                tools:text="@tools:sample/date/mmddyy"
-                android:layout_weight="5"/>
+                android:id="@+id/primaryLocation"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:textColor="@color/textColorEarthquakeLocation"
+                tools:text="@tools:sample/cities"/>
         </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:orientation="vertical"
+            android:padding="8dp">
+        <TextView
+                android:id="@+id/date"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:textColor="@color/textColorEarthquakeDetails"
+                tools:text="@tools:sample/date/mmddyy"/>
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:textColor="@color/textColorEarthquakeDetails"
+            tools:text="@tools:sample/date/hhmm"/>
+    </LinearLayout>
+    </LinearLayout>

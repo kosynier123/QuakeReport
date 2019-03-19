@@ -1,49 +1,42 @@
 package com.example.android.quakereport;
 
 public class Earthquake {
-    private double magnitude;
-    private String city;
-    private String date;
+    private double mMagnitude;
+    private String mLocation;
+    private long mDate;
+    private String mUrl;
 
     /**
      * Creates new Word object
+     *
      * @param magnitude - strength of quake
-     * @param city - place of quake
-     * @param date - date of quake
+     * @param location      - place of quake
+     * @param date      - mDate of quake
      */
 
-    public Earthquake(double magnitude, String city, String date){
-        this.magnitude = magnitude;
-        this.city = city;
-        this.date = date;
+    public Earthquake(double magnitude, String location, long date, String url) {
+        this.mMagnitude = magnitude;
+        this.mLocation = location;
+        this.mDate = date;
+        this.mUrl = url;
     }
+
+    public String getUrl() {
+        return mUrl;
+    }
+
 
     public double getMagnitude() {
-        return magnitude;
+        return mMagnitude;
     }
 
-    public String getCity() {
-        return city;
+    public String getLocation() {
+        return mLocation;
     }
 
-    public String getDate() {
-        return date;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
-    }
-
-    public void setDate(String date) {
-        this.date = date;
-    }
-
-    public void setMagnitude(double magnitude) {
-        this.magnitude = magnitude;
-    }
-
-    @Override
-    public String toString() {
-        return super.toString();
+    public long getDate() {
+        return mDate;
     }
 }
+
+
